@@ -21,7 +21,8 @@ def check_packages():
                 exit(f"Package installation error {pkg}")
         
 def delete_self():
-    os.remove(__file__)
+    __scriptpath__ = os.path.abspath(__file__)
+    os.remove(__scriptpath__)
     if sys.platform == 'linux':
         os.sync()
     elif sys.platform == 'darwin':
