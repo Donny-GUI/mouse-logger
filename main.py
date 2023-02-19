@@ -9,13 +9,6 @@ import matplotlib.pyplot as plt
 import numpy as np 
 
 
-@dataclass(slots=True)
-class File:
-    data = f"{os.getcwd()}\\data.txt"
-    clicks = f'{os.getcwd()}\\fortnite_clicks.txt'
-    append = 'a'
-    write = 'w'
-
 
 @dataclass(slots=True)
 class Position(object):
