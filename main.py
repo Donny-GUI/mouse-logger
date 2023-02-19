@@ -1,18 +1,3 @@
-import pkg_resources
-
-needed = ['pynput', 'matplotlib', 'pyautogui', 'numpy']
-package_list = [dist.project_name for dist in pkg_resources.working_set]
-
-def is_package_installed(package_name):
-    global package_list
-    return package_name in package_list
-
-def check_packages():
-    for pkg in needed:
-        if not is_package_installed(pkg):
-            os.system(f'pip install {pkg}')
-    
-
 
 from pyautogui import size 
 from pynput import mouse 
